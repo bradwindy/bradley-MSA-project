@@ -76,19 +76,26 @@ export default class DropArea extends React.Component<IProps, IState>{
 
     public render() {
         return (
-            <div className="cont">
-                <div className="centreText">
-                    <div className="dropZone">
-                        <ReactDropzone accept='image/*' onDrop={this.state.dropzone} style={{ position: "relative" }}>
-                            <div className="dropZoneText">
-                                {
-                                    this.state.imageFiles.length > 0 ?
-                                        <div>{this.state.imageFiles.map((file) => <img className="image1" key={file.name} src={file.preview} />)}</div> :
-                                        <p>Try dropping some files here, or click to select files to upload.</p>
-                                }
+            <div className="container mt-5">
+                <div className="row">
+                    <div className="col"/>
+                    <div className="col-xl-8">
+                        <div className="card text-white bg-dark p-4">
+                            <h5 className="card-title font-weight-bold pb-2">Drop an image here:</h5>
+                            <div className="dropZone">
+                                <ReactDropzone accept='image/*' onDrop={this.state.dropzone} style={{ position: "relative" }}>
+                                    <div className="dropZoneText">
+                                        {
+                                            this.state.imageFiles.length > 0 ?
+                                                <div>{this.state.imageFiles.map((file) => <img className="image1" key={file.name} src={file.preview} />)}</div> :
+                                                <p>Try dropping some files here, or click to select files to upload.</p>
+                                        }
+                                    </div>
+                                </ReactDropzone>
                             </div>
-                        </ReactDropzone>
+                        </div>
                     </div>
+                    <div className="col"/>
                 </div>
             </div>
         )
