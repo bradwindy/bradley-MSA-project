@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/jest": "^24.0.15",
     "@types/react-dropzone": "^4.2.0",
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
